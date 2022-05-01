@@ -1,0 +1,56 @@
+/**
+    ------ TEMPLATE TO REPRODUCE THE COMPONENT ------
+
+    <a class="ds-card" href="#">
+      <div>
+        <picture aria-hidden="true">
+          <source srcset="todefine" width="500" media="(max-width: 679px)">
+          <source srcset="todefine" width="450" media="(max-width: 1023px)">
+          <source srcset="todefine" width="450" media="(max-width: 1279px)">
+          <source srcset="todefine" width="450" media="(max-width: 1919px)">
+          <source srcset="todefine" width="492" media="(min-width: 1920px)">
+          <img alt="" src="todefine" width="400"/>
+        </picture>
+      </div>
+      
+      <div class="ds-card__body">
+        <span class="ds-card__body__tag">Tag</span>
+        <h3>card title</h3>
+        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchang</p>
+      </div>
+    </a>
+*/
+
+.ds-card {
+    width: 450px;
+
+    &__body {
+        background-color: $secondary;
+        padding: $general-size-xxs;
+        position: relative;
+        width: inherit;
+        top: -150px;
+        z-index: -1;
+        transition: top ease-in-out 0.3s;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        line-height: 16px;
+        max-height: 180px;
+        -webkit-line-clamp: 9;
+        -webkit-box-orient: vertical;
+
+        &__tag {
+            background-color: $tag;
+            padding: $general-size-xxs - 8;
+            border-radius: $general-size-xxs - 8;
+        }
+    }
+
+    &:hover {
+        .ds-card__body {
+            top: 0;
+            position: relative;
+        }
+    }
+}

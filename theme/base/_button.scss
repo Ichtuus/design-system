@@ -1,0 +1,18 @@
+button {
+    padding: $general-size-xxs;
+    background-color: $primary;
+    transition: background-color ease-in-out .3s;
+    margin: $general-size-xxs 0 $general-size-xs 0;
+    cursor: pointer;
+    font-size: inherit;
+
+    &:hover {
+        background-color: white;
+        border: 3px solid $primary;
+        color: $primary;
+    }
+
+    &:active {
+        border: none;
+    }
+}

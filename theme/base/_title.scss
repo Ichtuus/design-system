@@ -1,0 +1,15 @@
+h1, h2, h3 {
+    margin: $general-size-xxs 0 $general-size-xs 0;
+}
+
+h1 {
+    font-size: $font-xl;
+}
+
+h2 {
+    font-size: $font-l;
+}
+
+h3 {
+    font-size: $font-m;
+}

@@ -1,0 +1,19 @@
+@import './base/index';
+@import './component/index';
+
+@font-face {
+    font-family: Circular;
+    src: url('../сircular-font/Circular/CircularStd-Black.otf') format("opentype");
+    src: url('../сircular-font/Circular/CircularStd-BlackItalic.otf') format("opentype");
+    src: url('../сircular-font/Circular/CircularStd-Bold.otf') format("opentype");
+    src: url('../сircular-font/Circular/CircularStd-BoldItalic.otf') format("opentype");
+    src: url('../сircular-font/Circular/CircularStd-Book.otf') format("opentype");
+    src: url('../сircular-font/Circular/CircularStd-BookItalic.otf') format("opentype");
+    src: url('../сircular-font/Circular/CircularStd-Light Italic.otf') format("opentype");
+    src: url('../сircular-font/Circular/CircularStd-Medium.otf') format("opentype");
+    src: url('../сircular-font/Circular/CircularStd-MediumItalic.otf') format("opentype");
+}
+
+body {
+    font-family: 'Circular';
+}

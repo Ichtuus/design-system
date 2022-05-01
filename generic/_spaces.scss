@@ -1,0 +1,56 @@
+//Map of spacing amounts and their corresponding shortnames
+$spaceamounts: (
+  xxs: 12px,
+  xs: 16px,
+  s: 20px,
+  m: 28px,
+  l: 32px,
+  xl: 36px,
+  xxl: 40px,
+);
+
+//Map of spacing directions and their corresponding shortnames
+$directions: (
+  top: t,
+  bottom: b,
+  left: l,
+  right: r,
+);
+
+//Map of spacing types and their corresponding shortnames
+$types: (
+  margin: m,
+  padding: p,
+);
+
+//Main mixin that generates the classes
+@mixin generate-spacing-by-direction($type, $direction) {
+  @each $name, $space in $spaceamounts {
+    .#{map-get($types, $type)}#{map-get($directions, $direction)}-#{$name} {
+      #{$type}-#{$direction}: #{$space};
+    }
+  }
+}
+
+@mixin generate-spacing($type) {
+  @each $name, $space in $spaceamounts {
+    .#{map-get($types, $type)}-#{$name} {
+      #{$type}: #{$space};
+    }
+  }
+}
+
+//Mixin calls to generate each type of spacing
+//Unused spacing classes can be avoided by simply not including them
+@include generate-spacing-by-direction(margin, bottom);
+@include generate-spacing-by-direction(margin, top);
+@include generate-spacing-by-direction(margin, left);
+@include generate-spacing-by-direction(margin, right);
+@include generate-spacing-by-direction(padding, bottom);
+@include generate-spacing-by-direction(padding, top);
+@include generate-spacing-by-direction(padding, left);
+@include generate-spacing-by-direction(padding, right);
+
+
+@include generate-spacing(padding);
+@include generate-spacing(margin);

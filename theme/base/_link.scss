@@ -1,0 +1,22 @@
+a:not(.ds-card) {
+    display: inline-block;
+    color: currentColor;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin: $general-size-xxs 0 $general-size-xs 0;
+    cursor: pointer;
+
+    &::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: $primary;
+        transition: width  ease-in-out .3s;
+    }
+
+    &:hover::after {
+        width: 100%;
+    }
+}
+

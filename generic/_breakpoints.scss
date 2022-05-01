@@ -1,0 +1,19 @@
+$breakpoints: (
+    s: 679,
+    m: 1023,
+    l: 1279,
+    xl: 1919
+);
+
+@mixin set-from-screen($size) {
+    @if map-has-key($breakpoints, $size) {
+      @media screen and (min-width: #{map-get($breakpoints, $size)}px) {
+        @content;
+      }
+    }
+  
+    @else {
+      @error "The `#{$size}` key does not exist in the breakpoints map. "
+        + "Please make sure to use an authorized breakpoints";
+    }
+}
