@@ -11,13 +11,6 @@ Own design system
 
 * npm i @ichtus/design-system
 
-### Executing program
-
-* How to run the program
-* Step-by-step bullets
-```
-code blocks for commands
-```
 
 ## Authors
 
