@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/Ichtuus/design-system/compare/v1.2.0...v1.3.0) (2022-05-25)
+
+
+### Features
+
+* **grid:** Improve grid system by adding for different breakpoint ([15055d0](https://github.com/Ichtuus/design-system/commit/15055d0dbf5d86d84015513a0611063067ee86d8))
+
 ## [1.2.0](https://github.com/Ichtuus/design-system/compare/v1.1.0...v1.2.0) (2022-05-24)
 
 
