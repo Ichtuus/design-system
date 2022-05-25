@@ -4,23 +4,56 @@ $ds-grid-columns: 12;
 
 .ds-container {
     width: 100%;
-    max-width: 1200px;
     margin: 0 auto;
     padding: 0 $general-size-s;
     box-sizing: border-box;
 }
 
-.ds-row {
+.ds-flex {
     display: flex;
     flex-flow: row wrap;
+    align-items: flex-start;
+    display: flex;
+    gap: $general-size-s;
 }
 
-@include set-from-screen('s') {
-    @for $i from 1 through $ds-grid-columns {
-        .col-#{$i}-s {
-            box-sizing: border-box;
-            flex-grow: 0;
-            width: math.div($i * 100%, $ds-grid-columns);
+.ds-col {
+    flex: 1 1 100%;
+
+    @include set-from-screen('s') {
+        @for $i from 1 through $ds-grid-columns {
+            &__#{$i}-s {
+                box-sizing: border-box;
+                // flex-basis to 0 because i use box sizing
+                flex: 1 1 math.div($i * 100%, $ds-grid-columns) - 2 !important;
+            }
+        }
+    }
+    
+    @include set-from-screen('m') {
+        @for $i from 1 through $ds-grid-columns {
+            &__#{$i}-m {
+                box-sizing: border-box;
+                flex: 1 1 math.div($i * 100%, $ds-grid-columns) - 2 !important;
+            }
+        }
+    }
+    
+    @include set-from-screen('l') {
+        @for $i from 1 through $ds-grid-columns {
+            &__#{$i}-l {
+                box-sizing: border-box;
+                flex: 1 1 math.div($i * 100%, $ds-grid-columns) - 2 !important;
+            }
+        }
+    }
+    
+    @include set-from-screen('xl') {
+        @for $i from 1 through $ds-grid-columns {
+            &__#{$i}-xl {
+                box-sizing: border-box;
+                flex: 1 1 math.div($i * 100%, $ds-grid-columns) - 2 !important;
+            }
         }
     }
 }

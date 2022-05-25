@@ -1,5 +1,7 @@
 /node_modules
 
-## live sass compiler file ##
+## live sass compiler && darksass file ##
 /index.css
 /index.css.map
+/index.min.css
+/index.min.css.map
